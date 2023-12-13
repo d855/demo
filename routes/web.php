@@ -13,11 +13,11 @@
     });
     
     Route::get('/articles/create', function () {
-        return view('articles.create');
+        return view('article.create');
     });
     
     Route::get('/articles/{article:id}/edit', function (Article $article) {
-        return view('articles.edit', [
+        return view('article.edit', [
             'article' => $article
         ]);
     })->name('articles.edit');
